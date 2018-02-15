@@ -25,7 +25,7 @@ class UsersController extends Controller
     public function create(Request $request)
     {
         User::create($request->all());
-        return $request->all();
+        return User::orderBy('created_at', 'desc')->first();
     }
 
     /**
