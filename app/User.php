@@ -12,7 +12,7 @@ class User extends Eloquent
     protected $connection = 'mongodb';
     protected $collection = 'users';
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'profile', 'id_profile',
     ];
 
     /**
