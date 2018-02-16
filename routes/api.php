@@ -13,10 +13,21 @@ use Illuminate\Http\Request;
 |
 */
 
+/**
+ * Routes of user
+ */
 Route::post('user', 'UsersController@create');
 Route::get('user', 'UsersController@index');
 Route::put('user/{id}', 'UsersController@update');
 Route::delete('user/{id}', 'UsersController@destroy');
+
+/**
+ * Routes of profile
+ */
+Route::post('profile', 'ProfilesController@create');
+Route::get('profile', 'ProfilesController@index');
+Route::put('profile/{id}', 'ProfilesController@update');
+Route::delete('profile/{id}', 'ProfilesController@destroy');
 
 //Route::middleware('auth:api')->get('/user', function (Request $request) {
 //    return $request->user();
